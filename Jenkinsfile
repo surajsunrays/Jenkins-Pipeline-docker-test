@@ -1,7 +1,9 @@
 pipeline{
-    agent docker{
-            image 'hello-world'
-    }
+   agent {
+    docker {
+        image 'hello-world'
+           }
+        }
         stages{
             stage('Running'){
                 steps{
