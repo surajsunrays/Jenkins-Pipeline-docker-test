@@ -10,6 +10,7 @@ pipeline {
             steps {
                 sh 'java -version'
             }
+        }
         stage('Test Maven'){
             steps{
                 sh 'mvn --version'
@@ -17,4 +18,3 @@ pipeline {
         }
         }
     }
-}
