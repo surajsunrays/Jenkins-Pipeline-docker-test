@@ -2,14 +2,19 @@ pipeline {
     agent {
         docker 
         { 
-            image 'hello-world' 
+            image 'maven' 
         }
     }
     stages {
-        stage('Test') {
+        stage('Test Java') {
             steps {
-                sh 'sudo docker run hello-world'
+                sh 'java -version'
             }
+        stage('Test Maven'){
+            steps{
+                sh 'mvn --version'
+            }
+        }
         }
     }
 }
